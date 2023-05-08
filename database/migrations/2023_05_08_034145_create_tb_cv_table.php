@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('tb_cv', function (Blueprint $table) {
             $table->id();
+            $table->integer("NIM");
+            $table->string("cv_filename");
+            $table->string("cv_path");
             $table->timestamps();
+            $table->index(["NIM"]);
         });
     }
 

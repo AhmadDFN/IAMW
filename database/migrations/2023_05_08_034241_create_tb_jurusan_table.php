@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('tb_jurusan', function (Blueprint $table) {
             $table->id();
+            $table->string("jurusan_kd");
+            $table->string("jurusan_nm");
             $table->timestamps();
         });
     }

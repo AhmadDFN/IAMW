@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('tb_lamar', function (Blueprint $table) {
             $table->id();
+            $table->string("lamar_kd");
+            $table->string("lamar_nm");
+            $table->integer("NIM");
+            $table->integer("lamar_id_loker");
+            $table->integer("lamar_id_perusahaan");
             $table->timestamps();
+            $table->index(['NIM','lamar_id_loker','lamar_id_perusahaan']);
         });
     }
 

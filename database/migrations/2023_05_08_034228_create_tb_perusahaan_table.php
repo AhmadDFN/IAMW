@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('tb_perusahaan', function (Blueprint $table) {
             $table->id();
+            $table->string("perusahaan_nm");
+            $table->string("perusahaan_alamat");
+            $table->string("perusahaan_kota");
+            $table->integer("perusahaan_notelp");
+            $table->string("perusahaan_email");
+            $table->string("perusahaan_website");
             $table->timestamps();
         });
     }
