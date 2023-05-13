@@ -12,8 +12,26 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tb_mahasiswa', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
+            $table->string("mhs_NIM",10)->unique();
+            $table->string("mhs_nm",80);
+            $table->string("mhs_email",50);
+            $table->integer("mhs_jk")->default(1);
+            $table->string("mhs_notelp");
+            $table->year("mhs_th_masuk");
+            $table->year("mhs_th_lulus");
+            $table->string("mhs_kota_lahir",20);
+            $table->dateTime("mhs_tanggal_lahir");
+            $table->string("mhs_alamat",100);
+            $table->string("mhs_kota",20);
+            $table->integer("mhs_tb")->nullable();
+            $table->integer("mhs_bb")->nullable();
+            $table->text("mhs_foto")->nullable();
+            $table->text("mhs_cv")->nullable();
+            $table->string("mhs_kd_jurusan");
+            $table->integer("mhs_id_user");
             $table->timestamps();
+            $table->index(['mhs_kd_jurusan','mhs_id_user']);
         });
     }
 

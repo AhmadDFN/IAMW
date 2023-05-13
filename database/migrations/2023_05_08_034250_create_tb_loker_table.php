@@ -13,7 +13,16 @@ return new class extends Migration
     {
         Schema::create('tb_loker', function (Blueprint $table) {
             $table->id();
+            $table->string("loker_kd")->unique();
+            $table->string("loker_nm");
+            $table->string("loker_ket");
+            $table->dateTime("loker_exp");
+            $table->string("loker_kd_jurusan");
+            $table->integer("loker_status");
+            $table->integer("loker_id_perusahaan");
+            $table->integer("loker_id_jnsloker");
             $table->timestamps();
+            $table->index(['loker_kd_jurusan','loker_id_perusahaan']);
         });
     }
 
