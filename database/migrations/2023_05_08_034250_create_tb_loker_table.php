@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string("loker_kd")->unique();
             $table->string("loker_nm");
             $table->string("loker_ket");
+            $table->dateTime("loker_exp");
             $table->string("loker_kd_jurusan");
+            $table->integer("loker_status");
             $table->integer("loker_id_perusahaan");
             $table->integer("loker_id_jnsloker");
             $table->timestamps();

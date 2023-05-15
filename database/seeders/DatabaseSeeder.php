@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
         // Data Mahasiswa
 
         DB::table('tb_mahasiswa')->insert([
-            "NIM" => "2022320064",
+            "mhs_NIM" => "2022320064",
             "mhs_nm" => "Allifian Witama Putra",
             "mhs_email" => "fian@gmail.com",
             "mhs_jk" => 1,
@@ -70,16 +70,46 @@ class DatabaseSeeder extends Seeder
             "updated_at" => date("Y-m-d h:i:s")
         ]);
 
+        // Data Berkas
         DB::table('tb_berkas')->insert([
             "berkas_kd" => Str::random(10),
             "berkas_skck" => "None",
             "berkas_kk" => "None",
             "berkas_ijazah" => "None",
-            "NIM" => "2022320064",
+            "berkas_foto" => "None",
+            "berkas_cv" => "None",
+            "berkas_NIM" => "2022320064",
             "created_at" => date("Y-m-d h:i:s"),
             "updated_at" => date("Y-m-d h:i:s")
         ]);
 
+        // Data Perusahaan
+        DB::table('tb_perusahaan')->insert([
+            "perusahaan_nm" => "PT_Cikarang",
+            "perusahaan_alamat" => "JL. Perumnas roro lor No 18 Perkutut",
+            "perusahaan_kota" => "Cikarang",
+            "perusahaan_notelp" => "0351 757315",
+            "perusahaan_email" => "pt_cikarang@gmail.com",
+            "perusahaan_website" => "Cikarangable.com",
+            "perusahaan_cp_nama" => "Mr. Yukanto",
+            "perusahaan_cp_notelp" => "0810548464684",
+            "created_at" => date("Y-m-d h:i:s"),
+            "updated_at" => date("Y-m-d h:i:s")
+        ]);
+
+        // Jenis Loker
+        DB::table('tb_jenis_loker')->insert([
+            "jenis_loker_nm" => "Full Time",
+            "created_at" => date("Y-m-d h:i:s"),
+            "updated_at" => date("Y-m-d h:i:s")
+        ]);
+
+        // User
+        User::factory()->create([
+            'name' => 'Admin',
+            'email' => 'admin@material.com',
+            'password' => ('secret')
+        ]);
 
         // \App\Models\User::factory(10)->create();
 

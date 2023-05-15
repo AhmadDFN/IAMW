@@ -16,9 +16,11 @@ return new class extends Migration
             $table->string("perusahaan_nm");
             $table->string("perusahaan_alamat");
             $table->string("perusahaan_kota");
-            $table->integer("perusahaan_notelp");
+            $table->string("perusahaan_notelp");
             $table->string("perusahaan_email");
             $table->string("perusahaan_website");
+            $table->string("perusahaan_cp_nama")->nullable();
+            $table->string("perusahaan_cp_notelp")->nullable();
             $table->timestamps();
         });
     }

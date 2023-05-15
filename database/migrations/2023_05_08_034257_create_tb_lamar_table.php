@@ -15,11 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string("lamar_kd");
             $table->string("lamar_nm");
-            $table->integer("NIM");
+            $table->string("lamar_NIM");
             $table->integer("lamar_id_loker");
-            $table->integer("lamar_id_perusahaan");
             $table->timestamps();
-            $table->index(['NIM','lamar_id_loker','lamar_id_perusahaan']);
+            $table->index(['lamar_NIM','lamar_id_loker']);
         });
     }
 

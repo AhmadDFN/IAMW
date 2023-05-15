@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tb_mahasiswa', function (Blueprint $table) {
             // $table->id();
-            $table->integer("NIM",10)->unique();
+            $table->string("mhs_NIM",10)->unique();
             $table->string("mhs_nm",80);
             $table->string("mhs_email",50);
             $table->integer("mhs_jk")->default(1);

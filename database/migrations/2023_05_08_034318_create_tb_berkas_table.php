@@ -16,10 +16,12 @@ return new class extends Migration
             $table->string("berkas_kd")->unique();
             $table->string("berkas_skck");
             $table->string("berkas_kk");
+            $table->string("berkas_foto");
+            $table->string("berkas_cv");
             $table->string("berkas_ijazah");
-            $table->integer("NIM");
+            $table->string("berkas_NIM");
             $table->timestamps();
-            $table->index(["NIM"]);
+            $table->index(["berkas_NIM"]);
         });
     }
 
