@@ -23,8 +23,18 @@ class MahasiswaFactory extends Factory
 
         return [
             "mhs_NIM" => $faker->unique()->$th_masuk.$kd_jurusan.numberBetween($min = 1, $max = 999),
-
-
+            "mhs_nm" => $faker->name($gender),
+            "mhs_email" => $faker->email(),
+            "mhs_jk" => $gender=="Male" ? 1 : 2,
+            "mhs_notelp" => $faker->e164PhoneNumber(),
+            "mhs_th_masuk" => $th_masuk,
+            "mhs_th_lulus" => $th_masuk+1,
+            "mhs_kota_lahir" => $faker->city(),
+            "mhs_tanggal_lahir" => $faker->dateTimeBetween($startDate = '-30 years', $endDate = '-18 years'),
+            "mhs_alamat" => $faker->address(),
+            "mhs_kota" => $faker->city(),
+            "mhs_tb" => $faker->numberBetween($min = 150, $max = 190),
+            "mhs_kd_jurusan" => $kd_jurusan,
         ];
     }
 }

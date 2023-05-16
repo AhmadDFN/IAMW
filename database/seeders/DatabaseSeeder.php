@@ -56,7 +56,8 @@ class DatabaseSeeder extends Seeder
             "mhs_alamat" => "Kedunggalar Ngawi",
             "mhs_kota" => "Madiun",
             "mhs_tb" => "178",
-            "mhs_kd_jurusan" => "IK",
+            "mhs_bb" => "60",
+            "mhs_kd_jurusan" => "330",
             "mhs_id_user" => 2,
             "created_at" => date("Y-m-d h:i:s"),
             "updated_at" => date("Y-m-d h:i:s")
