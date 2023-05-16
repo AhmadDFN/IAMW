@@ -3,9 +3,12 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\tb_mahasiswa;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Database\Seeders\MahasiswaFactory;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder

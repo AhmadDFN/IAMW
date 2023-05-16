@@ -9,5 +9,5 @@ class tb_mahasiswa extends Model
 {
     use HasFactory;
 
-    protected $guarded = ["mhs_NIM"];
+    protected $guarded = ["mhs_id_user"];
 }
